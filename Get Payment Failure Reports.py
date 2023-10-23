@@ -6,10 +6,10 @@ from datetime import datetime
 
 
 def copy_most_recent_files(folder_path):
-    # Step 2: Specify the naming conventions
+    # Specify the naming conventions
     naming_convention = "*_Payment_Failures_*.csv"
 
-    # Step 3: Navigate to the specific folder
+    # Navigate to the specific folder
     search_path = os.path.join(folder_path, naming_convention)
     files = sorted(glob.glob(search_path), key=os.path.getctime, reverse=True)
 
